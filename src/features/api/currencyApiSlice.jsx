@@ -1,16 +1,7 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-export const currencyApi = createApi({
-  reducerPath: "currencyApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "/cryptoserver" }),
-  endpoints: (builder) => ({
-    getAllCurrencies: builder.query({
-      query: () => ({
-        url: "/currency",
-        method: 'GET'
-      }),
-    }),
-  }),
-});
-
-export const { useGetAllCurrenciesQuery } = currencyApi;
+const supported_vs_currencies = [
+  "btc", "eth", "ltc", "bch", "bnb", "eos", "xrp", "xlm", "link", "dot", "yfi", "usd",
+  "aed", "ars", "aud", "bdt", "bhd", "sgd", "thb", "try", "twd", "uah", "vef", "vnd",
+  "zar", "xdr", "xag", "xau", "bits", "sats"
+];
+export {supported_vs_currencies}

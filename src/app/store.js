@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { coinApi } from "../features/api/coinApiSlice";
-import { currencyApi } from "../features/api/currencyApiSlice";
+
 import { marketDataApi } from "../features/api/marketDataApiSlice";
 import currencyDropDownReducer from "../features/currencyDropDownSlice";
 import cryptoCurrencyDropDownReducer from "../features/cryptoCurrencyDropDownSlice";
@@ -13,7 +13,7 @@ export const store = configureStore({
   //reducers
   reducer: {
     [coinApi.reducerPath]: coinApi.reducer,
-    [currencyApi.reducerPath]: currencyApi.reducer,
+
     [marketDataApi.reducerPath]: marketDataApi.reducer,
     selectCurrency: currencyDropDownReducer,
     selectCryptoCurrency: cryptoCurrencyDropDownReducer,
@@ -24,7 +24,7 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware()
       .concat(coinApi.middleware)
-      .concat(currencyApi.middleware)
+    
       .concat(marketDataApi.middleware),
 });
 /*The need for this middleware arises from the fact that the currencyApi slice likely includes

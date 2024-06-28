@@ -1,27 +1,30 @@
 {
-  "_SyncLoader-71c78061.js": {
-    "file": "assets/SyncLoader-71c78061.js",
+  "_SyncLoader-bc99ccca.js": {
+    "file": "assets/SyncLoader-bc99ccca.js",
     "imports": [
       "index.html"
     ]
+  },
+  "_currencyApiSlice-985e2a1c.js": {
+    "file": "assets/currencyApiSlice-985e2a1c.js"
   },
   "_emotion-unitless.esm-e90fc357.js": {
     "file": "assets/emotion-unitless.esm-e90fc357.js"
   },
-  "_index-c5995de6.js": {
-    "file": "assets/index-c5995de6.js",
+  "_index-d82ce3a2.js": {
+    "file": "assets/index-d82ce3a2.js",
     "imports": [
       "index.html"
     ]
   },
-  "_moment-23b92408.js": {
-    "file": "assets/moment-23b92408.js",
+  "_moment-953a37ad.js": {
+    "file": "assets/moment-953a37ad.js",
     "imports": [
       "index.html"
     ]
   },
-  "_styled-components.browser.esm-4aa0b125.js": {
-    "file": "assets/styled-components.browser.esm-4aa0b125.js",
+  "_styled-components.browser.esm-f29a7b16.js": {
+    "file": "assets/styled-components.browser.esm-f29a7b16.js",
     "imports": [
       "_emotion-unitless.esm-e90fc357.js",
       "index.html"
@@ -48,57 +51,57 @@
       "src/components/charts/VerticalBarChart.jsx",
       "src/components/charts/LineChart.jsx"
     ],
-    "file": "assets/index-3c66cd65.js",
+    "file": "assets/index-3d8844dd.js",
     "isEntry": true,
     "src": "index.html"
   },
   "src/components/charts/HorizontalBarChart.jsx": {
-    "file": "assets/HorizontalBarChart-f73fef6d.js",
+    "file": "assets/HorizontalBarChart-20693c80.js",
     "imports": [
       "index.html",
-      "_moment-23b92408.js",
-      "_SyncLoader-71c78061.js",
-      "_index-c5995de6.js"
+      "_moment-953a37ad.js",
+      "_SyncLoader-bc99ccca.js",
+      "_index-d82ce3a2.js"
     ],
     "isDynamicEntry": true,
     "src": "src/components/charts/HorizontalBarChart.jsx"
   },
   "src/components/charts/LineChart.jsx": {
-    "file": "assets/LineChart-b51b678b.js",
+    "file": "assets/LineChart-293a9292.js",
     "imports": [
       "index.html",
-      "_moment-23b92408.js",
-      "_SyncLoader-71c78061.js",
-      "_index-c5995de6.js"
+      "_moment-953a37ad.js",
+      "_SyncLoader-bc99ccca.js",
+      "_index-d82ce3a2.js"
     ],
     "isDynamicEntry": true,
     "src": "src/components/charts/LineChart.jsx"
   },
   "src/components/charts/PieChart.jsx": {
-    "file": "assets/PieChart-7daea9ca.js",
+    "file": "assets/PieChart-c95510bb.js",
     "imports": [
       "index.html",
-      "_index-c5995de6.js",
-      "_SyncLoader-71c78061.js"
+      "_index-d82ce3a2.js",
+      "_SyncLoader-bc99ccca.js"
     ],
     "isDynamicEntry": true,
     "src": "src/components/charts/PieChart.jsx"
   },
   "src/components/charts/VerticalBarChart.jsx": {
-    "file": "assets/VerticalBarChart-0c1c9c67.js",
+    "file": "assets/VerticalBarChart-c41b9ef9.js",
     "imports": [
       "index.html",
-      "_moment-23b92408.js",
-      "_styled-components.browser.esm-4aa0b125.js",
-      "_SyncLoader-71c78061.js",
-      "_index-c5995de6.js",
+      "_moment-953a37ad.js",
+      "_styled-components.browser.esm-f29a7b16.js",
+      "_SyncLoader-bc99ccca.js",
+      "_index-d82ce3a2.js",
       "_emotion-unitless.esm-e90fc357.js"
     ],
     "isDynamicEntry": true,
     "src": "src/components/charts/VerticalBarChart.jsx"
   },
   "src/components/dropdowns/ChartTypeDropDown.jsx": {
-    "file": "assets/ChartTypeDropDown-621706aa.js",
+    "file": "assets/ChartTypeDropDown-512cd3d9.js",
     "imports": [
       "index.html"
     ],
@@ -106,35 +109,37 @@
     "src": "src/components/dropdowns/ChartTypeDropDown.jsx"
   },
   "src/components/dropdowns/CryptoCurrencyDropDown.jsx": {
-    "file": "assets/CryptoCurrencyDropDown-7697cf35.js",
+    "file": "assets/CryptoCurrencyDropDown-c6f31af8.js",
     "imports": [
       "index.html",
-      "_styled-components.browser.esm-4aa0b125.js",
+      "_styled-components.browser.esm-f29a7b16.js",
       "_emotion-unitless.esm-e90fc357.js"
     ],
     "isDynamicEntry": true,
     "src": "src/components/dropdowns/CryptoCurrencyDropDown.jsx"
   },
   "src/components/dropdowns/CurrencyDropDown.jsx": {
-    "file": "assets/CurrencyDropDown-9f170e71.js",
+    "file": "assets/CurrencyDropDown-8c04cc86.js",
     "imports": [
       "index.html",
-      "_styled-components.browser.esm-4aa0b125.js",
+      "_styled-components.browser.esm-f29a7b16.js",
+      "_currencyApiSlice-985e2a1c.js",
       "_emotion-unitless.esm-e90fc357.js"
     ],
     "isDynamicEntry": true,
     "src": "src/components/dropdowns/CurrencyDropDown.jsx"
   },
   "src/components/exchangerates/ExchangeRates.jsx": {
-    "file": "assets/ExchangeRates-fa40cbc7.js",
+    "file": "assets/ExchangeRates-6fb785e5.js",
     "imports": [
-      "index.html"
+      "index.html",
+      "_currencyApiSlice-985e2a1c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/components/exchangerates/ExchangeRates.jsx"
   },
   "src/components/searchbar/Searchbar.jsx": {
-    "file": "assets/Searchbar-f78c2c46.js",
+    "file": "assets/Searchbar-74ffc1ed.js",
     "imports": [
       "index.html"
     ],
@@ -142,17 +147,17 @@
     "src": "src/components/searchbar/Searchbar.jsx"
   },
   "src/components/sidebar/Sidebar.jsx": {
-    "file": "assets/Sidebar-56deefdb.js",
+    "file": "assets/Sidebar-f80640f6.js",
     "imports": [
       "index.html",
       "_emotion-unitless.esm-e90fc357.js",
-      "_SyncLoader-71c78061.js"
+      "_SyncLoader-bc99ccca.js"
     ],
     "isDynamicEntry": true,
     "src": "src/components/sidebar/Sidebar.jsx"
   },
   "src/components/timeButtons/TimeButton.jsx": {
-    "file": "assets/TimeButton-04313537.js",
+    "file": "assets/TimeButton-e2b57a61.js",
     "imports": [
       "index.html"
     ],

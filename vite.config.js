@@ -19,11 +19,7 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
-      '/cryptoserver': {
-        target: 'https://cryptoserver.onrender.com/',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/cryptoserver/, ''),
-      },
+     
     },
   },
 });

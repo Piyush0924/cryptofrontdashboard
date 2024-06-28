@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useGetExchangeDataQuery } from "../../features/api/marketDataApiSlice";
-import { useGetAllCurrenciesQuery } from "../../features/api/currencyApiSlice";
+import { supported_vs_currencies } from "../../features/api/currencyApiSlice";
 
 const ExchangeRates = () => {
   const [enteredValue, setEnteredValue] = useState("");
   const [sellCurrency, setSellCurrency] = useState("btc");
   const [buyCurrency, setBuyCurrency] = useState("btc");
-  const [convertedValue, setConvertedValue] = useState(" ");
+  const [convertedValue, setConvertedValue] = useState("");
 
   const handleSellChange = (e) => {
     setSellCurrency(e.target.value);
@@ -15,15 +15,14 @@ const ExchangeRates = () => {
     setBuyCurrency(e.target.value);
   };
 
-  //Fetch currency list data
-  const { data: currencyList } = useGetAllCurrenciesQuery();
+  // Fetch exchange data
   const { data: exchangeData } = useGetExchangeDataQuery();
 
   function ConversionFormula(enteredValue) {
     const convertedValue = (
       (parseFloat(enteredValue) *
-        parseFloat(exchangeData && exchangeData.rates[buyCurrency].value)) /
-      parseFloat(exchangeData && exchangeData?.rates[sellCurrency].value)
+        parseFloat(exchangeData?.rates[buyCurrency]?.value)) /
+      parseFloat(exchangeData?.rates[sellCurrency]?.value)
     ).toFixed(2);
 
     return convertedValue;
@@ -46,15 +45,14 @@ const ExchangeRates = () => {
                 onChange={handleSellChange}
                 value={sellCurrency}
               >
-                <option value="sellCurrency" disabled>
-                  BTC
+                <option value="" disabled>
+                  Select Currency
                 </option>
-                {currencyList &&
-                  currencyList.map((currencyName) => (
-                    <option value={currencyName} key={currencyName}>
-                      {currencyName.toUpperCase()}
-                    </option>
-                  ))}
+                {supported_vs_currencies.map((currencyName) => (
+                  <option value={currencyName} key={currencyName}>
+                    {currencyName.toUpperCase()}
+                  </option>
+                ))}
               </select>
             </div>
             <div className="flex items-center w-full">
@@ -64,15 +62,14 @@ const ExchangeRates = () => {
                 onChange={handleBuyChange}
                 value={buyCurrency}
               >
-                <option value="sellCurrency" disabled>
-                  BTC
+                <option value="" disabled>
+                  Select Currency
                 </option>
-                {currencyList &&
-                  currencyList.map((currencyName) => (
-                    <option value={currencyName} key={currencyName}>
-                      {currencyName.toUpperCase()}
-                    </option>
-                  ))}
+                {supported_vs_currencies.map((currencyName) => (
+                  <option value={currencyName} key={currencyName}>
+                    {currencyName.toUpperCase()}
+                  </option>
+                ))}
               </select>
             </div>
           </div>
@@ -101,4 +98,4 @@ const ExchangeRates = () => {
   );
 };
 
-export { ExchangeRates};
+export { ExchangeRates };

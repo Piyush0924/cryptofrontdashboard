@@ -1,8 +1,7 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setCurrency } from "../../features/currencyDropDownSlice";
-import { useGetAllCurrenciesQuery } from "../../features/api/currencyApiSlice";
-import { useSelector } from "react-redux";
+import { supported_vs_currencies } from "../../features/api/currencyApiSlice";
 
 const ExchangeDropDown = () => {
   const dispatch = useDispatch();
@@ -16,9 +15,6 @@ const ExchangeDropDown = () => {
     dispatch(setCurrency(e.target.value));
   };
 
-  // Fetch currency list data
-  const { data: currencyList } = useGetAllCurrenciesQuery();
-
   return (
     <div className="h-10vh w-1/4">
       <select
@@ -26,16 +22,17 @@ const ExchangeDropDown = () => {
         onChange={handleChange}
         value={currency}
       >
-        <option disabled>Vs_Currency</option>
-        {currencyList &&
-          currencyList.map((currencyName) => (
-            <option value={currencyName} key={currencyName}>
-              {currencyName}
-            </option>
-          ))}
+        <option value="" disabled>
+          Vs_Currency
+        </option>
+        {supported_vs_currencies.map((currencyName) => (
+          <option value={currencyName} key={currencyName}>
+            {currencyName.toUpperCase()}
+          </option>
+        ))}
       </select>
     </div>
   );
 };
 
-export {ExchangeDropDown};
+export { ExchangeDropDown };
