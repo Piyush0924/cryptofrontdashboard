@@ -6,7 +6,11 @@ export default defineConfig({
   base: '/cryptofrontdashboard/',
   build: {
     outDir: 'dist',  // Output directory for the build
+   
     assetsDir: 'assets',  // Directory for static assets
+ 
+    manifest: true, // Generate manifest.json
+    sourcemap: false, // Disable source maps for production
   },
   server: {
     proxy: {

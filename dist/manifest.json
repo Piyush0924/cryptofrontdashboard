@@ -1,0 +1,162 @@
+{
+  "_SyncLoader-71c78061.js": {
+    "file": "assets/SyncLoader-71c78061.js",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "_emotion-unitless.esm-e90fc357.js": {
+    "file": "assets/emotion-unitless.esm-e90fc357.js"
+  },
+  "_index-c5995de6.js": {
+    "file": "assets/index-c5995de6.js",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "_moment-23b92408.js": {
+    "file": "assets/moment-23b92408.js",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "_styled-components.browser.esm-4aa0b125.js": {
+    "file": "assets/styled-components.browser.esm-4aa0b125.js",
+    "imports": [
+      "_emotion-unitless.esm-e90fc357.js",
+      "index.html"
+    ]
+  },
+  "index.css": {
+    "file": "assets/index-e12e197a.css",
+    "src": "index.css"
+  },
+  "index.html": {
+    "css": [
+      "assets/index-e12e197a.css"
+    ],
+    "dynamicImports": [
+      "src/components/dropdowns/CryptoCurrencyDropDown.jsx",
+      "src/components/dropdowns/CurrencyDropDown.jsx",
+      "src/components/searchbar/Searchbar.jsx",
+      "src/components/timeButtons/TimeButton.jsx",
+      "src/components/dropdowns/ChartTypeDropDown.jsx",
+      "src/components/sidebar/Sidebar.jsx",
+      "src/components/charts/PieChart.jsx",
+      "src/components/exchangerates/ExchangeRates.jsx",
+      "src/components/charts/HorizontalBarChart.jsx",
+      "src/components/charts/VerticalBarChart.jsx",
+      "src/components/charts/LineChart.jsx"
+    ],
+    "file": "assets/index-3c66cd65.js",
+    "isEntry": true,
+    "src": "index.html"
+  },
+  "src/components/charts/HorizontalBarChart.jsx": {
+    "file": "assets/HorizontalBarChart-f73fef6d.js",
+    "imports": [
+      "index.html",
+      "_moment-23b92408.js",
+      "_SyncLoader-71c78061.js",
+      "_index-c5995de6.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/components/charts/HorizontalBarChart.jsx"
+  },
+  "src/components/charts/LineChart.jsx": {
+    "file": "assets/LineChart-b51b678b.js",
+    "imports": [
+      "index.html",
+      "_moment-23b92408.js",
+      "_SyncLoader-71c78061.js",
+      "_index-c5995de6.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/components/charts/LineChart.jsx"
+  },
+  "src/components/charts/PieChart.jsx": {
+    "file": "assets/PieChart-7daea9ca.js",
+    "imports": [
+      "index.html",
+      "_index-c5995de6.js",
+      "_SyncLoader-71c78061.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/components/charts/PieChart.jsx"
+  },
+  "src/components/charts/VerticalBarChart.jsx": {
+    "file": "assets/VerticalBarChart-0c1c9c67.js",
+    "imports": [
+      "index.html",
+      "_moment-23b92408.js",
+      "_styled-components.browser.esm-4aa0b125.js",
+      "_SyncLoader-71c78061.js",
+      "_index-c5995de6.js",
+      "_emotion-unitless.esm-e90fc357.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/components/charts/VerticalBarChart.jsx"
+  },
+  "src/components/dropdowns/ChartTypeDropDown.jsx": {
+    "file": "assets/ChartTypeDropDown-621706aa.js",
+    "imports": [
+      "index.html"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/components/dropdowns/ChartTypeDropDown.jsx"
+  },
+  "src/components/dropdowns/CryptoCurrencyDropDown.jsx": {
+    "file": "assets/CryptoCurrencyDropDown-7697cf35.js",
+    "imports": [
+      "index.html",
+      "_styled-components.browser.esm-4aa0b125.js",
+      "_emotion-unitless.esm-e90fc357.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/components/dropdowns/CryptoCurrencyDropDown.jsx"
+  },
+  "src/components/dropdowns/CurrencyDropDown.jsx": {
+    "file": "assets/CurrencyDropDown-9f170e71.js",
+    "imports": [
+      "index.html",
+      "_styled-components.browser.esm-4aa0b125.js",
+      "_emotion-unitless.esm-e90fc357.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/components/dropdowns/CurrencyDropDown.jsx"
+  },
+  "src/components/exchangerates/ExchangeRates.jsx": {
+    "file": "assets/ExchangeRates-fa40cbc7.js",
+    "imports": [
+      "index.html"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/components/exchangerates/ExchangeRates.jsx"
+  },
+  "src/components/searchbar/Searchbar.jsx": {
+    "file": "assets/Searchbar-f78c2c46.js",
+    "imports": [
+      "index.html"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/components/searchbar/Searchbar.jsx"
+  },
+  "src/components/sidebar/Sidebar.jsx": {
+    "file": "assets/Sidebar-56deefdb.js",
+    "imports": [
+      "index.html",
+      "_emotion-unitless.esm-e90fc357.js",
+      "_SyncLoader-71c78061.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/components/sidebar/Sidebar.jsx"
+  },
+  "src/components/timeButtons/TimeButton.jsx": {
+    "file": "assets/TimeButton-04313537.js",
+    "imports": [
+      "index.html"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/components/timeButtons/TimeButton.jsx"
+  }
+}

@@ -1,4 +1,4 @@
-import{h as K,j as c}from"./index-a649c57c.js";import{m as k,t as V,r as v,d as Y,a as Q,v as Z,c as B,i as m,A as D,P as ee,B as re,e as te,b as ae,C as ie,p as ne,f as oe,g as le}from"./index-530a0c5d.js";import{_ as se}from"./SyncLoader-07c7e56c.js";/*!
+import{h as K,j as c}from"./index-3c66cd65.js";import{m as k,t as V,r as v,d as Y,a as Q,v as Z,c as B,i as m,A as D,P as ee,B as re,e as te,b as ae,C as ie,p as ne,f as oe,g as le}from"./index-c5995de6.js";import{_ as se}from"./SyncLoader-71c78061.js";/*!
  * chartjs-plugin-datalabels v2.2.0
  * https://chartjs-plugin-datalabels.netlify.app
  * (c) 2017-2022 chartjs-plugin-datalabels contributors
