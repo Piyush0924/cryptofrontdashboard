@@ -3,7 +3,11 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/cryptofrontdashboard/',  // Add this line
+  base: '/cryptofrontdashboard/',
+  build: {
+    outDir: 'dist',  // Output directory for the build
+    assetsDir: 'assets'  // Directory for static assets
+  },  // Add this line
   server: {
     proxy: {
       '/api': {
