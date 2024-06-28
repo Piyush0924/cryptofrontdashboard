@@ -50,6 +50,7 @@ const Home = () => {
   const chartType = useSelector((state) => state.selectChartType.selectedChartType);
 
   return (
+    <>
     <div className="w-full">
       <Navbar />
 
@@ -109,6 +110,7 @@ const Home = () => {
         </div>
       </ErrorBoundary>
     </div>
+    </>
   );
 };
 
