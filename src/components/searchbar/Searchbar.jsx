@@ -8,30 +8,30 @@ const Searchbar = () => {
 
   const dispatch = useDispatch();
 
-  //Fetch coin list data
+  // Fetch coin list data
   const { data: coinList } = useGetAllCoinsQuery();
 
   const handleClick = (e) => {
-    dispatch(setCryptoCurrency(e.target.value));
+    dispatch(setCryptoCurrency(e.target.textContent)); // Update to use textContent instead of value
     setSearchValue("");
   };
 
   return (
-    <div className="h-8 w-80">
+    <div className="h-8 w-80 relative">
       <input
         className="w-full h-full p-2 rounded-md border border-gray-300"
         value={searchValue}
         placeholder="Search Crypto Currencies"
         onChange={(e) => setSearchValue(e.target.value)}
       />
-      <div className={`w-full h-12 overflow-y-scroll bg-blue-200 p-1 rounded-b-md ${searchValue ? 'block' : 'hidden'}`}>
+      <div className={`absolute w-full max-h-32 overflow-y-auto bg-blue-200 p-1 rounded-b-md ${searchValue ? 'block' : 'hidden'}`}>
         {coinList &&
           coinList
-            .filter((coin) => coin.name.includes(searchValue))
+            .filter((coin) => coin.name.toLowerCase().includes(searchValue.toLowerCase())) // Case insensitive search
             .map((coin) => (
               <p
                 key={coin.id}
-                className="cursor-pointer font-normal"
+                className="cursor-pointer font-normal p-1 hover:bg-blue-300"
                 onClick={handleClick}
               >
                 {coin.name}
@@ -42,4 +42,4 @@ const Searchbar = () => {
   );
 };
 
-export {Searchbar};
+export { Searchbar };
