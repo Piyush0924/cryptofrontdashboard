@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <>
-    <div>
+    <div class="logo" >
       <img src= "/almalogo.png" alt="" />
     </div>
    </>
