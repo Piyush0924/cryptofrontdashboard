@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://proton.ad.gt/join-ad-interest-groups.html?evid=L4CEICB0 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="origin-trial" content="A7EJXd+QZ2JL/N8k85e+yMFGsIkETopEYjLMJjZMUYg51sgbRqLKdhW9nOiyEdVwWCOq8YRHOx+w9GQ8D9HqeAoAAACCeyJvcmlnaW4iOiJodHRwczovL2F1ZGlnZW50LmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+    <title>Audigent Proton</title>
+    <script>
+        !function (w, d) {
+            const PROFILER_SERVICE_URL = 'https://p.ad.gt';
+
+            function addTrackingPixel(interestGroupNames, eventId) {
+                if (eventId != null) {
+                    const payload = {
+                        'events': [{
+                            'type': 'dsp_js_load',
+                            'igs': interestGroupNames,
+                            'evid': eventId
+                        }]
+                    };
+                    const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
+                    w.navigator.sendBeacon(`${PROFILER_SERVICE_URL}/api/v1/event`, blob);
+                }
+            };
+
+            const url = new URL(w.location.href);
+            w.addEventListener('message', function (event) {
+                try {
+                    const payload = JSON.parse(event.data);
+                    const channel = payload['channel'];
+                    if (payload != null && channel === 'AUPA') {
+                        // the payload is the correct one, run main logic
+                        if ('joinAdInterestGroup' in w.navigator &&
+                            d.featurePolicy.allowsFeature('join-ad-interest-group')) {
+                            console.log('[Audigent DSP.js] navigator.joinAdInterestGroup() is supported on this page');
+
+                            const eventId = url.searchParams.get('evid');
+                            const interestGroups = payload['igs'];
+
+                            let i = 0;
+                            let interestGroupNames = []
+                            while (i < interestGroups.length) {
+                                w.navigator.joinAdInterestGroup(interestGroups[i]);
+                                interestGroupNames.push(interestGroups[i]['name']);
+                                i++;
+                            }
+                            console.log("[Audigent DSP.js] add user to [" + interestGroupNames.join(",") + "]");
+                            addTrackingPixel(interestGroupNames, eventId);
+                        } else {
+                            console.log('[Audigent DSP.js] navigator.joinAdInterestGroup() is not supported on this page');
+                        }
+                    }
+                }
+                catch (error) {
+                    // console.error('[Audigent DSP.js] ', error);
+                    return;
+                }
+            });
+
+        }(window, document);
+    </script>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1188.0" data-gr-ext-installed="">
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
