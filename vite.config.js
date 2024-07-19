@@ -3,24 +3,20 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/cryptofrontdashboard/',
+  base: '/cryptofrontdashboard/',  // Base URL for the project
   build: {
     outDir: 'dist',  // Output directory for the build
-   
     assetsDir: 'assets',  // Directory for static assets
- 
-    manifest: true, // Generate manifest.json
-    sourcemap: false, // Disable source maps for production
+    manifest: true,  // Generate manifest.json
+    sourcemap: false,  // Disable source maps for production
   },
   server: {
     proxy: {
       '/api': {
-        target: 'https://api.coingecko.com/api/v3',
+        target: 'https://api.coingecko.com/api/v3',  // API server target
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
+        rewrite: (path) => path.replace(/^\/api/, ''),  // Rewrite API path
       },
-     
     },
   },
 });
-
