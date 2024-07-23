@@ -11,6 +11,15 @@ export default defineConfig({
  
     manifest: true, // Generate manifest.json
     sourcemap: false, // Disable source maps for production
+    rollupOptions: {
+      output:
+      {
+          format: 'es',
+          strict: false,
+          entryFileNames: "[name].js",
+          dir: 'dist/'
+      }
+   }
   },
   server: {
     proxy: {
@@ -22,5 +31,7 @@ export default defineConfig({
      
     },
   },
+ 
+
 });
 
