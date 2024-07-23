@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/cryptofrontdashboard/',
+ 
   build: {
     outDir: 'dist',  // Output directory for the build
    
@@ -12,6 +12,8 @@ export default defineConfig({
     manifest: true, // Generate manifest.json
     sourcemap: false, // Disable source maps for production
     rollupOptions: {
+     assetsDir: "./",
+      
       output:
       {
           format: 'es',
