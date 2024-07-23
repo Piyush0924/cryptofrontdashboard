@@ -4,17 +4,39 @@ import { Navbar } from "../components/navbar/Navbar";
 import { ErrorBoundary } from 'react-error-boundary';
 
 // Memoize and Lazy Load Components
-const CryptoCurrencyDropDown = React.lazy(() => import("../components/dropdowns/CryptoCurrencyDropDown"));
-const CurrencyDropDown = React.lazy(() => import("../components/dropdowns/CurrencyDropDown"));
-const Searchbar = React.lazy(() => import("../components/searchbar/Searchbar"));
-const TimeButton = React.lazy(() => import("../components/timeButtons/TimeButton"));
-const ChartTypeDropDown = React.lazy(() => import("../components/dropdowns/ChartTypeDropDown"));
-const Sidebar = React.lazy(() => import("../components/sidebar/Sidebar"));
-const PieChart = React.lazy(() => import("../components/charts/PieChart"));
-const ExchangeRates = React.lazy(() => import("../components/exchangerates/ExchangeRates"));
-const HorizontalBarChart = React.lazy(() => import("../components/charts/HorizontalBarChart"));
-const VerticalBarChart = React.lazy(() => import("../components/charts/VerticalBarChart"));
-const LineChart = React.lazy(() => import("../components/charts/LineChart"));
+const MemoizedCryptoCurrencyDropDown = React.memo(
+  React.lazy(() => import("../components/dropdowns/CryptoCurrencyDropDown").then(module => ({ default: module.CryptoCurrencyDropDown })))
+);
+const MemoizedCurrencyDropDown = React.memo(
+  React.lazy(() => import("../components/dropdowns/CurrencyDropDown").then(module => ({ default: module.CurrencyDropDown })))
+);
+const MemoizedSearchbar = React.memo(
+  React.lazy(() => import("../components/searchbar/Searchbar").then(module => ({ default: module.Searchbar })))
+);
+const MemoizedTimeButton = React.memo(
+  React.lazy(() => import("../components/timeButtons/TimeButton").then(module => ({ default: module.TimeButton })))
+);
+const MemoizedChartTypeDropDown = React.memo(
+  React.lazy(() => import("../components/dropdowns/ChartTypeDropDown").then(module => ({ default: module.ChartTypeDropDown })))
+);
+const MemoizedSidebar = React.memo(
+  React.lazy(() => import("../components/sidebar/Sidebar").then(module => ({ default: module.Sidebar })))
+);
+const MemoizedPieChart = React.memo(
+  React.lazy(() => import("../components/charts/PieChart").then(module => ({ default: module.PieChart })))
+);
+const MemoizedExchangeRates = React.memo(
+  React.lazy(() => import("../components/exchangerates/ExchangeRates").then(module => ({ default: module.ExchangeRates })))
+);
+const MemoizedHorizontalBarChart = React.memo(
+  React.lazy(() => import("../components/charts/HorizontalBarChart").then(module => ({ default: module.HorizontalBarChart })))
+);
+const MemoizedVerticalBarChart = React.memo(
+  React.lazy(() => import("../components/charts/VerticalBarChart").then(module => ({ default: module.VerticalBarChart })))
+);
+const MemoizedLineChart = React.memo(
+  React.lazy(() => import("../components/charts/LineChart").then(module => ({ default: module.LineChart })))
+);
 
 // Error fallback component for ErrorBoundary
 const ErrorFallback = ({ error, resetErrorBoundary }) => (
@@ -30,6 +52,7 @@ const Home = () => {
   const chartType = useSelector((state) => state.selectChartType.selectedChartType);
 
   return (
+    <>
     <div className="w-full">
       {/* Navbar component */}
       <Navbar />
@@ -43,11 +66,11 @@ const Home = () => {
             <div className="flex justify-between items-center h-20 px-4 md:px-8 bg-red-500">
               {/* Lazy-loaded CurrencyDropDown component */}
               <Suspense fallback={<div>Loading currency dropdown...</div>}>
-                <CurrencyDropDown />
+                <MemoizedCurrencyDropDown />
               </Suspense>
               {/* Lazy-loaded Searchbar component */}
               <Suspense fallback={<div>Loading searchbar...</div>}>
-                <Searchbar />
+                <MemoizedSearchbar />
               </Suspense>
             </div>
 
@@ -57,17 +80,17 @@ const Home = () => {
                 <div className="flex justify-between items-center h-20 px-1 md:px-3 bg-blue-500">
                   {/* Lazy-loaded TimeButton component */}
                   <Suspense fallback={<div>Loading time button...</div>}>
-                    <TimeButton />
+                    <MemoizedTimeButton />
                   </Suspense>
                   
                   {/* Lazy-loaded CryptoCurrencyDropDown component */}
                   <Suspense fallback={<div>Loading crypto currency dropdown...</div>}>
-                    <CryptoCurrencyDropDown />
+                    <MemoizedCryptoCurrencyDropDown />
                   </Suspense>
                   
                   {/* Lazy-loaded ChartTypeDropDown component */}
                   <Suspense fallback={<div>Loading chart type dropdown...</div>}>
-                    <ChartTypeDropDown />
+                    <MemoizedChartTypeDropDown />
                   </Suspense>
                 </div>
 
@@ -76,11 +99,11 @@ const Home = () => {
                   <Suspense fallback={<div>Loading chart...</div>}>
                     {/* Conditional rendering of chart based on chartType */}
                     {chartType === "verticalBarChart" ? (
-                      <VerticalBarChart />
+                      <MemoizedVerticalBarChart />
                     ) : chartType === "horizontalBarChart" ? (
-                      <HorizontalBarChart />
+                      <MemoizedHorizontalBarChart />
                     ) : (
-                      <LineChart />
+                      <MemoizedLineChart />
                     )}
                   </Suspense>
                 </div>
@@ -90,11 +113,11 @@ const Home = () => {
               <div className="md:w-full flex flex-row justify-between items-stretch">
                 {/* Lazy-loaded PieChart component */}
                 <Suspense fallback={<div>Loading pie chart...</div>}>
-                  <PieChart />
+                  <MemoizedPieChart />
                 </Suspense>
                 {/* Lazy-loaded ExchangeRates component */}
                 <Suspense fallback={<div>Loading exchange rates...</div>}>
-                  <ExchangeRates />
+                  <MemoizedExchangeRates />
                 </Suspense>
               </div>
             </div>
@@ -104,12 +127,13 @@ const Home = () => {
           <div className="md:w-1/5">
             {/* Lazy-loaded Sidebar component */}
             <Suspense fallback={<div>Loading sidebar...</div>}>
-              <Sidebar />
+              <MemoizedSidebar />
             </Suspense>
           </div>
         </div>
       </ErrorBoundary>
     </div>
+    </>
   );
 };
 
