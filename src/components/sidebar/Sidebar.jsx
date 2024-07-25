@@ -9,8 +9,8 @@ const Sidebar = () => {
 
   return (
     <div className="container mx-auto"> {/* Main container with auto margin */}
-      <div className="p-4"> {/* Padding for content */}
-        <h2 className="text-2xl font-bold mb-4">Top Trending Crypto Currencies by Coin Market</h2> {/* Title */}
+      <div className="p-1"> {/* Padding for content */}
+        <h2 className="text-2xl font-bold mb-1">Top Trending Crypto Currencies by Coin Market</h2> {/* Title */}
         
         {/* Loading spinner while data is being fetched */}
         <SyncLoader color="rgb(0, 51, 102)" size={10} loading={isFetching} />

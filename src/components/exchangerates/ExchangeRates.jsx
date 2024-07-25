@@ -41,7 +41,7 @@ const ExchangeRates = () => {
 
   // JSX rendering of the component
   return (
-    <div className="w-1/2 h-full m-1 shadow-md rounded-lg border-none">
+    <div className="w-1/2 h-full m-4 shadow-md rounded-lg border-none">
       <div className="w-full h-full p-2 flex flex-col justify-between">
         <p className="font-semibold text-lg m-2">Exchange Coins</p>
         <div className="flex justify-between flex-grow">
@@ -101,7 +101,7 @@ const ExchangeRates = () => {
         {/* Button for initiating exchange */}
         <div className="flex justify-center">
           <button
-            className="w-40 h-12 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 focus:outline-none"
+            className="w-40 h-12 m-16 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 focus:outline-none"
             onClick={handleClick}
           >
             Exchange
