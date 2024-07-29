@@ -18,6 +18,7 @@ console.log(selectedCoin)
   );
 console.log(selectedCurrency)
 
+
   // Accessing selected time from the store
   const selectedTime = useSelector((state) => state.selectTime.selectedTime);
 console.log(selectedTime)
@@ -30,11 +31,11 @@ console.log(selectedTime)
 
   // Extracting prices data from fetched market data
   const coinsData = cryptoData?.prices;
-
+  // console.log(coinsData);
   // Preparing chart data by mapping over prices data
   const chartData = coinsData?.map((value) => ({
-    x: value[0],
-    y: value[1],
+    x: value[0],//timestamp
+    y: value[1],//prices  
   })) || [];
 
   // Defining chart options
@@ -44,7 +45,7 @@ console.log(selectedTime)
       animateScale: true, // Enabling scale animation
     },
     plugins: {
-      legend: {
+      legend: {//rectangle top label//related  to usd vs bitcoin
         position: "top", // Positioning legend at the top
         align: "end", // Aligning legend to the end
       },

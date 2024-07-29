@@ -8,7 +8,7 @@ const CryptoCurrencyDropDown = () => {
   const cryptoCurrency = useSelector(
     (state) => state.selectCryptoCurrency.selectedCryptoCurrency
   );
-
+ 
   const dispatch = useDispatch(); // Initialize dispatch function
 
   // Fetch coin list data using RTK Query
