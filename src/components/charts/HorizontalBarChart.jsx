@@ -11,15 +11,16 @@ const HorizontalBarChart = () => {
   const selectedCoin = useSelector(
     (state) => state.selectCryptoCurrency.selectedCryptoCurrency
   );
-
+console.log(selectedCoin)
   // Accessing selected currency from the store
   const selectedCurrency = useSelector(
     (state) => state.selectCurrency.selectedCurrency
   );
+console.log(selectedCurrency)
 
   // Accessing selected time from the store
   const selectedTime = useSelector((state) => state.selectTime.selectedTime);
-
+console.log(selectedTime)
   // Fetching market data based on selected coin, currency, and time
   const { data: cryptoData, isFetching } = useGetMarketDataQuery({
     coin: selectedCoin,
@@ -48,17 +49,32 @@ const HorizontalBarChart = () => {
         align: "end", // Aligning legend to the end
       },
     },
-    scales: {
-      y: {
-        ticks: {
-          callback: function (value) {
-            return moment(value).format("MMM Do"); // Formatting y-axis ticks as dates
-          },
-        },
+    datalabels: {
+      font: function (context) {
+        var width = context.chart.width;
+        var size = Math.round(width / 32);
+        return {
+          size: size,
+          weight: 600,
+        };
+      },
+      formatter: function (value) {
+        return Math.round(value * 10) / 10;
       },
     },
-    indexAxis: "y", // Setting index axis to y-axis for horizontal bar chart
+    title: {
+      display: true,
+      text: "Horizontal Bar Chart",
+    },
+    indexAxis: "y",
+
+    elements: {
+      bar: {
+        borderWidth: 2,
+      },
+    },
   };
+
 
   // Preparing data for the chart
   const data = {
@@ -84,4 +100,4 @@ const HorizontalBarChart = () => {
   );
 };
 
-export { HorizontalBarChart }; 
+export { HorizontalBarChart };

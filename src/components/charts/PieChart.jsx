@@ -79,8 +79,8 @@ function PieChart() {
   };
 
   return (
-    <div className="w-1/2 h-full m-1 rounded-lg shadow-md"> {/* Container for the pie chart */}
-      <div className="w-full h-full flex flex-col justify-between p-1"> {/* Inner container with padding */}
+    <div className="w-auto md:w-1/2 rounded-lg shadow-md"> {/* Container for the pie chart */}
+      <div className="w-full h-full flex flex-col justify-between p-2"> {/* Inner container with padding */}
         <div className="flex h-{25vh} items-center justify-between"> {/* Header section with flexbox */}
           <p className="font-bold text-xl">Portfolio</p> {/* Portfolio title */}
           <p className="text-gray-500">

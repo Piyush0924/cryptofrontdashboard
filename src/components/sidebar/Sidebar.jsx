@@ -1,22 +1,23 @@
 import React from "react";
-import { useGetMarketsQuery } from "../../features/api/coinApiSlice"; // Importing useGetMarketsQuery hook from coinApiSlice
-import { CoinCard } from "../coinCard/CoinCard"; // Importing CoinCard component
-import SyncLoader from "react-spinners/SyncLoader"; // Importing SyncLoader component for loading spinner
+import { useGetMarketsQuery } from "../../features/api/coinApiSlice";
+import { CoinCard } from "../coinCard/CoinCard";
+import SyncLoader from "react-spinners/SyncLoader";
 
 const Sidebar = () => {
-  // Fetch market data using useGetMarketsQuery hook
   const { data, isFetching } = useGetMarketsQuery();
 
   return (
-    <div className="container mx-auto"> {/* Main container with auto margin */}
-      <div className="p-1"> {/* Padding for content */}
-        <h2 className="text-2xl font-bold mb-1">Top Trending Crypto Currencies by Coin Market</h2> {/* Title */}
-        
+    <div className=""> {/* Main container with auto margin */}
+      <div className="shadow-2xl p-2 rounded-lg max-h-[75vh]"> {/* Container with max height and scroll */}
+        <h2 className="text-2xl font-bold border-b-2 pb-4 p-2"> {/* Title */}
+          Top Trending Crypto Currencies by Coin Market
+        </h2>
+
         {/* Loading spinner while data is being fetched */}
         <SyncLoader color="rgb(0, 51, 102)" size={10} loading={isFetching} />
-        
+
         {/* Grid layout for displaying coin cards */}
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 text-sm">
           {/* Rendering CoinCard component for each coin in the data */}
           {data &&
             data.map((coin) => <CoinCard key={coin.id} coin={coin} />)}

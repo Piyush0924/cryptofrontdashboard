@@ -41,7 +41,7 @@ const ExchangeRates = () => {
 
   // JSX rendering of the component
   return (
-    <div className="w-1/2 h-full m-4 shadow-md rounded-lg border-none">
+    <div className="w-auto md:w-1/2 shadow-md rounded-lg border-none">
       <div className="w-full h-full p-2 flex flex-col justify-between">
         <p className="font-semibold text-lg m-2">Exchange Coins</p>
         <div className="flex justify-between flex-grow">
@@ -88,7 +88,7 @@ const ExchangeRates = () => {
           {/* Input for entering value and displaying converted value */}
           <div className="flex flex-col w-1/2 items-center justify-around p-2">
             <input
-              className="w-1/2 h-12 rounded-lg text-center font-semibold focus:outline-none"
+              className="w-1/2 h-12 rounded-lg text-center font-semibold border border-blue-500"
               placeholder="Enter value"
               value={enteredValue}
               onChange={(e) => setEnteredValue(e.target.value)}

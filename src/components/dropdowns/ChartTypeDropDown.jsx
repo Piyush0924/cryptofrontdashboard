@@ -18,9 +18,9 @@ const ChartTypeDropDown = () => {
   };
 
   return (
-    <div className="h-10vh m-4"> {/* Container for the dropdown */}
+    <div className="max-w-xs w-full mt-3 md:mt-0"> {/* Container for the dropdown */}
       <select
-        className="w-full h-12 bg-blue-100 rounded-lg font-medium p-3 cursor-pointer" // Styling for the select element
+        className=" w-full font-semibold bg-blue-100 rounded-lg p-2 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500" // Styling for the select element
         value={chartType} // Bind selected value to chartType from the store
         onChange={handleChange} // Handle change event
       >

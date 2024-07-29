@@ -19,4 +19,4 @@ export const cryptoCurrencyDropDownSlice = createSlice({
 
 // Export the action creator and reducer function
 export const { setCryptoCurrency } = cryptoCurrencyDropDownSlice.actions; // Export action creator
-export default cryptoCurrencyDropDownSlice.reducer; // Export reducer function
+export default cryptoCurrencyDropDownSlice.reducer; // Export default reducer function
