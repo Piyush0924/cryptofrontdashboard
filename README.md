@@ -3,8 +3,16 @@ Hello All,
 
 This is a Crypto currency dashboard project that shows price charts, calculates exchange rates, and displays a list of top cryptocurrencies according to their market cap. It is created with React and Redux JavaScript libraries, styled components, and utilizes CoinGecko's API for information.
 
-Demo Link
-It is deployed using Netlify: Crypto Dashboard url
+## Deployment URL
+
+- **Front-End: [https://cryptofrontdashboardpiyush.netlify.app](https://cryptofrontdashboardpiyush.netlify.app)**
+
+## Screenshots
+
+### Large Device
+
+![large-device](https://cryptofrontdashboardpiyush.netlify.app/large.png)
+![large-device](https://cryptofrontdashboardpiyush.netlify.app/large-image.png)
 
 Available Scripts
 In the project directory, you can run:
