@@ -109,7 +109,7 @@ const Home = () => {
             {/* Main content area */}
             <div className="md:w-3/4 h-full">
               {/* Top section with dropdowns and search bar */}
-              <div className="flex justify-between items-center gap-4 md:gap-0 h-20 px-4 md:px-8 bg-red-500">
+              <div className="flex justify-between items-center gap-4 md:gap-0 h-20 px-4 md:px-8 bg-red-500 rounded-t-md">
                 {/* Lazy-loaded CurrencyDropDown component */}
                 <Suspense fallback={<div>Loading currency dropdown...</div>}>
                   <MemoizedCurrencyDropDown />
@@ -153,7 +153,7 @@ const Home = () => {
               </div>
 
               {/* Bottom section with pie chart and exchange rates */}
-              <div className="flex flex-col md:flex-row">
+              <div className="flex flex-col md:flex-row md:mt-3">
                 {/* Lazy-loaded PieChart component */}
                 <Suspense fallback={<div>Loading pie chart...</div>}>
                   <MemoizedPieChart />
