@@ -11,17 +11,17 @@ const HorizontalBarChart = () => {
   const selectedCoin = useSelector(
     (state) => state.selectCryptoCurrency.selectedCryptoCurrency
   );
-console.log(selectedCoin)
+
   // Accessing selected currency from the store
   const selectedCurrency = useSelector(
     (state) => state.selectCurrency.selectedCurrency
   );
-console.log(selectedCurrency)
+
 
 
   // Accessing selected time from the store
   const selectedTime = useSelector((state) => state.selectTime.selectedTime);
-console.log(selectedTime)
+
   // Fetching market data based on selected coin, currency, and time
   const { data: cryptoData, isFetching } = useGetMarketDataQuery({
     coin: selectedCoin,
