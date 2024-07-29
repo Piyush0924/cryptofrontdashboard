@@ -11,11 +11,11 @@ const HorizontalBarChart = () => {
   const selectedCoin = useSelector(
     (state) => state.selectCryptoCurrency.selectedCryptoCurrency
   );
-
   // Accessing selected currency from the store
   const selectedCurrency = useSelector(
     (state) => state.selectCurrency.selectedCurrency
   );
+
 
   // Accessing selected time from the store
   const selectedTime = useSelector((state) => state.selectTime.selectedTime);
@@ -29,11 +29,11 @@ const HorizontalBarChart = () => {
 
   // Extracting prices data from fetched market data
   const coinsData = cryptoData?.prices;
-
+  // console.log(coinsData);
   // Preparing chart data by mapping over prices data
   const chartData = coinsData?.map((value) => ({
-    x: value[0],
-    y: value[1],
+    x: value[0],//timestamp
+    y: value[1],//prices  
   })) || [];
 
   // Defining chart options
@@ -43,22 +43,37 @@ const HorizontalBarChart = () => {
       animateScale: true, // Enabling scale animation
     },
     plugins: {
-      legend: {
+      legend: {//rectangle top label//related  to usd vs bitcoin
         position: "top", // Positioning legend at the top
         align: "end", // Aligning legend to the end
       },
     },
-    scales: {
-      y: {
-        ticks: {
-          callback: function (value) {
-            return moment(value).format("MMM Do"); // Formatting y-axis ticks as dates
-          },
-        },
+    datalabels: {
+      font: function (context) {
+        var width = context.chart.width;
+        var size = Math.round(width / 64);
+        return {
+          size: size,
+          weight: 600,
+        };
+      },
+      formatter: function (value) {
+        return Math.round(value * 10) / 10;
       },
     },
-    indexAxis: "y", // Setting index axis to y-axis for horizontal bar chart
+    title: {
+      display: true,  //look after
+      text: "Horizontal Bar Chart",
+    },
+    indexAxis: "y",
+
+    elements: {
+      bar: {
+        borderWidth: 2,//look after
+      },
+    },
   };
+
 
   // Preparing data for the chart
   const data = {
