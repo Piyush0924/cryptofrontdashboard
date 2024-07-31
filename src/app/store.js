@@ -13,9 +13,8 @@ export const store = configureStore({
   //reducers
   reducer: {
     [coinApi.reducerPath]: coinApi.reducer,
-    
-
     [marketDataApi.reducerPath]: marketDataApi.reducer,
+    
     selectCurrency: currencyDropDownReducer,///reducer method name selectCurrency
     selectCryptoCurrency: cryptoCurrencyDropDownReducer,
     selectTime: timeReducer,

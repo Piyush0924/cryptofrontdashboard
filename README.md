@@ -1,18 +1,77 @@
-Crypto Currency Dashboard (Frontend Project)
+# CryptoCurrencyDashboard (Frontend Project)
 Hello All,
 
 This is a Crypto currency dashboard project that shows price charts, calculates exchange rates, and displays a list of top cryptocurrencies according to their market cap. It is created with React and Redux JavaScript libraries, styled components, and utilizes CoinGecko's API for information.
 
 ## Deployment URL
 
-- **Front-End: [https://cryptofrontdashboardpiyush.netlify.app](https://cryptofrontdashboardpiyush.netlify.app)**
+- **Front-End: [https://cryptofrontdashboard.netlify.app/](https://cryptofrontdashboard.netlify.app/)**
 
 ## Screenshots
 
 ### Large Device
 
-![large-device](https://cryptofrontdashboardpiyush.netlify.app/large.png)
-![large-device](https://cryptofrontdashboardpiyush.netlify.app/large-image.png)
+![Website-view](https://cryptofrontdashboard.netlify.app/large.png)
+
+## Project Summary
+
+### Problem Statement
+Tracking cryptocurrency prices and understanding exchange rates can be complex due to the vast amount of data and the need for real-time information. Existing tools may not provide a comprehensive or user-friendly interface for these tasks. **CryptoDashboard** addresses these challenges by offering a streamlined platform where users can:
+
+- View real-time price charts for various cryptocurrencies.
+- Calculate exchange rates between different cryptocurrencies.
+- Access a dynamically updated list of the top trending cryptocurrencies based on market cap.
+
+### Approach
+As a team of two developers, we focused on creating an intuitive and interactive application to simplify cryptocurrency tracking. Our approach involved the following core features:
+
+- **Price Charts:** Real-time charts displaying cryptocurrency prices with options to compare multiple currencies.
+- **Exchange Rates:** Calculation and display of exchange rates between different cryptocurrencies.
+- **Top Cryptocurrencies:** A list of leading cryptocurrencies by market cap, updated dynamically.
+
+### Technologies Used
+- **Front-End:** Built using React for a responsive and modern design, with Tailwind CSS for styling.
+- **State Management:** Managed using Redux toolkit to ensure a seamless user experience.
+- **API Integration:** Utilized CoinGecko’s API to fetch real-time cryptocurrency data.
+
+## How to Run
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone gh repo clone https://github.com/Piyush0924/cryptofrontdashboard.git
+   ```
+
+2. **Install the dependencies:**
+
+   ```bash
+   npm i
+   cd frontend && npm i
+   ```
+
+3. **Running the Project Locally:** Navigate to the project's root directory and run the following commands
+
+   ```bash
+
+   # Run the react frontend
+   npm run dev
+   ```
+
+## Developer
+
+- **Name:** Piyush Pakmode
+- **GitHub:** [https://github.com/sumit-nagrikar](https://github.com/sumit-nagrikar)
+- **LinkedIn:** [https://www.linkedin.com/in/sumit-nagrikar](https://www.linkedin.com/in/sumit-nagrikar)
+- **Email:** sumitnagrikar1@gmail.com
+
+- **Name:** Sumit Nagrikar
+- **GitHub:** [https://github.com/sumit-nagrikar](https://github.com/sumit-nagrikar)
+- **LinkedIn:** [https://www.linkedin.com/in/sumit-nagrikar](https://www.linkedin.com/in/sumit-nagrikar)
+- **Email:** sumitnagrikar1@gmail.com
+
+## License
+
+This repository is MIT licensed. [Read more](./LICENSE.txt)
 
 Available Scripts
 In the project directory, you can run:
@@ -36,33 +95,6 @@ The build is minified, and the filenames include the hashes.
 Your app is ready to be deployed!
 
 See the section about deployment for more information.
-
-npm run eject
-Note: this is a one-way operation. Once you eject, you can't go back!
-
-If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc.) right into your project so you have full control over them. All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them. At this point, you're on your own.
-
-You don't have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However, we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-Code Splitting
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-Analyzing the Bundle Size
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-Making a Progressive Web App
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-Advanced Configuration
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-Deployment
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-npm run build fails to minify
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 # React + Vite
 

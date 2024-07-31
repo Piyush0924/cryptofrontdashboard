@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"; // Importing hooks from React-Redux
 import { setCryptoCurrency } from "../../features/cryptoCurrencyDropDownSlice"; // Importing the setCryptoCurrency action
 import { useGetAllCoinsQuery } from "../../features/api/coinApiSlice"; // Importing the API query hook
@@ -16,8 +16,9 @@ const CryptoCurrencyDropDown = () => {
 
   // Handle change event for the dropdown
   const handleChange = (e) => {
-    dispatch(setCryptoCurrency(e.target.value)); // Dispatch setCryptoCurrency action with selected value
+    dispatch(setCryptoCurrency(e.target.value));
   };
+  
 
   return (
     <div className="max-w-xs w-full mt-3 md:mt-0">
