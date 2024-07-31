@@ -46,7 +46,7 @@ As a team of two developers, we focused on creating an intuitive and interactive
 
    ```bash
    npm i
-   cd frontend && npm i
+   cd cryptofrontdashboard && npm i
    ```
 
 3. **Running the Project Locally:** Navigate to the project's root directory and run the following commands
@@ -63,7 +63,7 @@ As a team of two developers, we focused on creating an intuitive and interactive
 - **GitHub:** [https://github.com/sumit-nagrikar](https://github.com/sumit-nagrikar)
 - **LinkedIn:** [https://www.linkedin.com/in/sumit-nagrikar](https://www.linkedin.com/in/sumit-nagrikar)
 - **Email:** sumitnagrikar1@gmail.com
-
+--------------------------------------------------------------
 - **Name:** Sumit Nagrikar
 - **GitHub:** [https://github.com/sumit-nagrikar](https://github.com/sumit-nagrikar)
 - **LinkedIn:** [https://www.linkedin.com/in/sumit-nagrikar](https://www.linkedin.com/in/sumit-nagrikar)
