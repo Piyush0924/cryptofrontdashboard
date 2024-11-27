@@ -1,8 +1,21 @@
-{
-  "rewrites":
-     [
-      { "source": "/(.*)",
-        "destination": "/" }
-    ]
-  }
+
         
+{
+  "headers": [
+    {
+      "source": "/path-to-font/:file",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "font/woff2"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
