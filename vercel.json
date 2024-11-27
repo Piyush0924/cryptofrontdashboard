@@ -1,21 +1,13 @@
 
-        
 {
-  "headers": [
-    {
-      "source": "/path-to-font/:file",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "font/woff2"
-        }
-      ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
-  ]
-}
+    "version": 2,
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build"
+      }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "/" }
+    ]
+  }
