@@ -40,3 +40,10 @@
 .read-the-docs {
   color: #888;
 }
+
+@font-face {
+  font-family: 'CircularXXWeb';
+  src: url('/path-to-font/CircularXXWeb-Book.woff2') format('woff2');
+  font-display: swap;
+}
+
