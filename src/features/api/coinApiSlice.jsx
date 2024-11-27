@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const coinApi = createApi({
   reducerPath: "coinApi", // Specifies the slice name in the Redux store
-  baseQuery: fetchBaseQuery({ baseUrl: "/api" }), // Sets up the base query function with a base URL
+  baseQuery: fetchBaseQuery({ baseUrl: "https://api.coingecko.com/api/v3" }), // Sets up the base query function with a base URL
   endpoints: (builder) => ({
     getTrendingCoins: builder.query({
       query: () => "/search/trending", // Endpoint for fetching trending coins
