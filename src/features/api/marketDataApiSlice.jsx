@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const marketDataApi = createApi({
   reducerPath: "marketDataApi", // Specifies the slice name in the Redux store
-  baseQuery: fetchBaseQuery({ baseUrl: "/api" }), // Sets up the base query function with a base URL
+  baseQuery: fetchBaseQuery({ baseUrl: "https://api.coingecko.com/api/v3" }), // Sets up the base query function with a base URL
   endpoints: (builder) => ({
     getMarketData: builder.query({
       query: ({ coin, currency, time }) =>
