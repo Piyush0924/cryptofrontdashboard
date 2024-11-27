@@ -18,7 +18,7 @@ export default defineConfig({
       {
           format: 'es',
           strict: false,
-          entryFileNames: "main.js",
+          entryFileNames: "src/main.js",
           dir: 'dist/'
       }
    }
