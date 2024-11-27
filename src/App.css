@@ -42,11 +42,15 @@
 }
 
 @font-face {
-  font-family: 'CircularXXWeb-Book';
-  src: url('/path-to-font/CircularXXWeb-Book.woff2') format('woff2'),
-       url('/path-to-font/CircularXXWeb-Book.woff') format('woff');
+  font-family: 'CircularXXWeb';
+  src: url('/path-to-font/CircularXXWeb-Book.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
+
+body {
+  font-family: 'CircularXXWeb', sans-serif;
+}
+
 
 
