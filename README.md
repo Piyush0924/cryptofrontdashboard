@@ -5,7 +5,7 @@ This is a Crypto currency dashboard project that shows price charts, calculates 
 
 ## Deployment URL
 
-- **Front-End: [https://cryptofrontdashboard.netlify.app/](https://cryptofrontdashboard.netlify.app/)**
+- **Front-End: [https://cryptofrontdashboard.vercel.app/](https://cryptofrontdashboard.vercel.app/)**
 
 ## Screenshots
 
